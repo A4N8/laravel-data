@@ -19,7 +19,7 @@ use Spatie\LaravelData\PaginatedDataCollection;
 trait WithDeprecatedCollectionMethod
 {
     /** @deprecated */
-    public static function collection(Enumerable|array|AbstractPaginator|Paginator|AbstractCursorPaginator|CursorPaginator|DataCollection $items): DataCollection|CursorPaginatedDataCollection|PaginatedDataCollection
+    public static function collection(Enumerable|array|AbstractPaginator|Paginator|AbstractCursorPaginator|CursorPaginator|DataCollection|null $items): DataCollection|CursorPaginatedDataCollection|PaginatedDataCollection
     {
         if ($items instanceof Paginator || $items instanceof AbstractPaginator) {
             return static::collect(
