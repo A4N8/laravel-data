@@ -134,7 +134,7 @@ class DataCollectableFromSomethingResolver
             || $items instanceof AbstractPaginator
             || $items instanceof CursorPaginator
             || $items instanceof AbstractCursorPaginator) {
-            $items = $items->items();
+            return $items;
         }
 
         if ($items instanceof Enumerable) {
